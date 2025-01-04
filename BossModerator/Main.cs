@@ -83,7 +83,7 @@ namespace BossModerator
         {
             npc.active = false;
             TShock.Utils.Broadcast(
-                $"Boss spawn prevented; {npc.FullName} is banned until {Config.StartDate.AddDays(day_num).ToLongDateString()}, {Config.StartDate.AddDays(day_num).ToShortTimeString()}.",
+                $"Boss spawn prevented!\n{npc.FullName} is banned until {Config.StartDate.AddDays(day_num).ToLongDateString()}, {Config.StartDate.AddDays(day_num).ToShortTimeString()}.",
                 Color.Chocolate
             );
         }
