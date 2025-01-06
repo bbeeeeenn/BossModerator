@@ -1,6 +1,6 @@
 # TShockPlugin-BossModerator
 
-This repository contains the TShockPlugin-BossModerator, a plugin for TShock that provides moderation features for managing bosses in Terraria.
+A plugin for TShock that prevents bosses from being spawned until the specified schedule
 
 ## Contributing
 
