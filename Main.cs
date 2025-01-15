@@ -1,6 +1,5 @@
 ﻿using System.Globalization;
 using Microsoft.Xna.Framework;
-using NuGet.Common;
 using Terraria;
 using TerrariaApi.Server;
 using TShockAPI;
