@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using Microsoft.Xna.Framework;
+using NuGet.Common;
 using Terraria;
 using TerrariaApi.Server;
 using TShockAPI;
@@ -117,17 +118,25 @@ namespace BossModerator
 
             if (text.EndsWith(" has awoken!"))
             {
-                string bossName = text[..text.IndexOf(" has awoken!")];
-
-                foreach (NPC npc in Main.npc)
+                string bossName = text[..text.IndexOf(" has awoken!")].ToLower();
+                if (
+                    (bossName == "retinazer" || bossName == "spazmatism")
+                    && Config.StartDate.AddDays(Config.Schedules["the twins"]) > DateTime.Now
+                )
                 {
-                    if (!npc.boss)
-                        continue;
-                    if (npc.FullName.StartsWith(bossName) && !npc.active)
-                    {
-                        args.Handled = true;
-                    }
+                    args.Handled = true;
                 }
+                else if (Config.StartDate.AddDays(Config.Schedules[bossName]) > DateTime.Now)
+                {
+                    args.Handled = true;
+                }
+            }
+            else if (
+                text == "The Twins have awoken!"
+                && Config.StartDate.AddDays(Config.Schedules["the twins"]) > DateTime.Now
+            )
+            {
+                args.Handled = true;
             }
         }
 

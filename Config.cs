@@ -10,8 +10,6 @@ namespace BossModerator
         {
             { "king slime", 0 },
             { "deerclops", 0 },
-            { "duke fishron", 0 },
-            { "empress of light", 0 },
             { "eye of cthulhu", 1 },
             { "queen bee", 2 },
             { "eater of worlds", 3 },
@@ -19,6 +17,8 @@ namespace BossModerator
             { "skeletron", 4 },
             { "wall of flesh", 5 },
             { "queen slime", 5 },
+            { "duke fishron", 6 },
+            { "empress of light", 6 },
             { "the twins", 6 },
             { "skeletron prime", 7 },
             { "the destroyer", 8 },
